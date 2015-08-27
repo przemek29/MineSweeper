@@ -1,0 +1,5 @@
+c:\users\dominika\documents\visual studio 2015\Projects\Logic\Logic\bin\Debug\Logic.dll
+c:\users\dominika\documents\visual studio 2015\Projects\Logic\Logic\bin\Debug\Logic.pdb
+c:\users\dominika\documents\visual studio 2015\Projects\Logic\Logic\obj\Debug\Logic.dll
+c:\users\dominika\documents\visual studio 2015\Projects\Logic\Logic\obj\Debug\Logic.pdb
+c:\users\dominika\documents\visual studio 2015\Projects\Logic\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
