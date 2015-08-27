@@ -1,0 +1,7 @@
+C:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\LogicTest\bin\Debug\LogicTest.dll
+C:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\LogicTest\bin\Debug\LogicTest.pdb
+C:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\LogicTest\bin\Debug\Logic.dll
+C:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\LogicTest\bin\Debug\Logic.pdb
+C:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\LogicTest\obj\Debug\LogicTest.csprojResolveAssemblyReference.cache
+C:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\LogicTest\obj\Debug\LogicTest.dll
+C:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\LogicTest\obj\Debug\LogicTest.pdb

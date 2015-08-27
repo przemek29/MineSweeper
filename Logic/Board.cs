@@ -10,24 +10,21 @@ namespace Logic
     {
         public int Height
         {
-            get { return board.GetLength(0); }
+            get { return cell.GetLength(0); }
         }
 
         public int Width
         {
-            get {return board.GetLength(1); } 
+            get {return cell.GetLength(1); } 
         }
 
-        private int[,] board;
+        private Cell[,] cell;
 
-        public Board(int [,] inputBoard)
+        public Board(int sizeX, int sizeY)
         {
-            this.board = inputBoard;
+            this.cell = new Cell[sizeX, sizeY];
+           
         }
 
-        public int GetCell(int x, int y)
-        {
-            return board[x, y];
-        }
     }
 }
