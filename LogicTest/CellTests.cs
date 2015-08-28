@@ -9,7 +9,7 @@ namespace LogicTest
         [TestMethod]
         public void UsingFunctionPlaceMineShouldReturnStar()
         {
-            var cell = new Cell();
+            var cell = new Cell(true);
 
             var result = cell.placeMine();
 
@@ -19,7 +19,7 @@ namespace LogicTest
         [TestMethod]
         public void UsingFunctionPlaceEmptyCellShouldReturn0()
         {
-            var cell = new Cell();
+            var cell = new Cell(true);
 
             var result = cell.placeEmptyCell();
 
@@ -29,13 +29,13 @@ namespace LogicTest
         [TestMethod]
         public void EmptyCellShouldReturnTrueAndMineCellShouldReturnFalse()
         {
-            var cell = new Cell();
+            var cell = new Cell(true);
 
             cell.placeEmptyCell();
-            var resultEmptyCell = cell.CurrentState;
+            var resultEmptyCell = cell.LogicCurrentState;
 
             cell.placeMine();
-            var resultMineCell = cell.CurrentState;
+            var resultMineCell = cell.LogicCurrentState;
 
             Assert.AreEqual(true, resultEmptyCell);
             Assert.AreEqual(false, resultMineCell);

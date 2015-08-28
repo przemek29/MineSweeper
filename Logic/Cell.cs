@@ -1,29 +1,34 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+*/
 namespace Logic
 {
     public class Cell
     {
-        public bool CurrentState { get; private set; }
-        
-        public Cell()
+        private bool logicCurrentState;
+
+        public bool LogicCurrentState
         {
-            
+            get { return logicCurrentState; }
+            set { logicCurrentState = value; }
         }
 
+        public Cell(bool state)
+        {
+            this.logicCurrentState = state;
+        }
         public string placeMine()
         {
-            CurrentState = false;
+            LogicCurrentState = false;
             return "*";
         }
 
         public int placeEmptyCell()
         {
-            CurrentState = true;
+            LogicCurrentState = true;
             return 0;
         }
 
