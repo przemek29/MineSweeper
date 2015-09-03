@@ -1,7 +1,0 @@
-c:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\UnitTestProject1\bin\Debug\UnitTestProject1.dll
-c:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
-c:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\UnitTestProject1\obj\Debug\LogicTests.csprojResolveAssemblyReference.cache
-c:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\UnitTestProject1\obj\Debug\UnitTestProject1.dll
-c:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
-c:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\UnitTestProject1\bin\Debug\Logic.dll
-c:\Users\DOMINIKA\documents\visual studio 2015\Projects\Logic\UnitTestProject1\bin\Debug\Logic.pdb
