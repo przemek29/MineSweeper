@@ -61,14 +61,11 @@ namespace LogicTest
         [TestMethod]
         public void CheckAmountOfPlacedMines()
         {
-            var board = new Board(4, 4, 2);
+            var board = new Board(3, 3, 3);
 
             board.placeMines();
 
-            var result = board.GetPlacedMines;
-
-            Assert.AreEqual(2, result);
+            Assert.AreEqual(3, board.GetPlacedMines);
         }
-
     }
 }

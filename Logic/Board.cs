@@ -52,7 +52,8 @@ namespace Logic
             {
                 for (int j = 0; j < height; j++)
                 {
-                    cellTable[i, j] = new Cell(true);
+                    cellTable[i, j] = new Cell();
+                    cellTable[i, j].placeEmptyCell();
                 }
             }
 
@@ -70,12 +71,91 @@ namespace Logic
                 rndY = rnd.Next(0, height - 1);
 
 
-                if (cellTable[rndX, rndY].LogicCurrentState == true)
+                if (cellTable[rndX, rndY].CurrentState == false)
                 {
                     cellTable[rndX, rndY].placeMine();
                     countMines++;
                 }
             }
+
+            for(int i = 0; i < width; i++)
+            {
+                for(int j = 0; j < height; j++)
+                {
+                    if (cellTable[i, j].CurrentState == false)
+                        cellTable[i, j].EmptyCellState = CountNeighbours(i, j);
+                }
+            }
+        }
+
+        private bool checkMine(int x, int y)
+        {
+            if (cellTable[x, y].CurrentState == true)
+                return true;
+            return false;
+        }
+
+        private bool SafeGetCurrentState(int x, int y)
+        {
+            if (x >= 0 && y >= 0 && x < height && y < width)
+            {
+                return cellTable[x, y].CurrentState;
+            }
+            return false;
+        }
+
+        public int CountNeighbours(int x, int y)
+        {
+            int n = 0;
+
+            if (SafeGetCurrentState(x - 1, y - 1))
+            {
+                n++;
+            }
+
+            if (SafeGetCurrentState(x - 1, y))
+            {
+                n++;
+            }
+
+            if (SafeGetCurrentState(x, y - 1))
+            {
+                n++;
+            }
+
+            if (SafeGetCurrentState(x + 1, y))
+            {
+                n++;
+            }
+
+            if (SafeGetCurrentState(x, y + 1))
+            {
+                n++;
+            }
+
+            if (SafeGetCurrentState(x + 1, y + 1))
+            {
+                n++;
+            }
+
+            if (SafeGetCurrentState(x - 1, y + 1))
+            {
+                n++;
+            }
+
+            if (SafeGetCurrentState(x + 1, y - 1))
+            {
+                n++;
+            }
+
+            return n;
+        }
+
+        private void ProcessSingleCell(int x, int y)
+        {
+            int neighbours = CountNeighbours(x, y);
+
+            cellTable[x, y].EmptyCellState = neighbours;
         }
     }
 }

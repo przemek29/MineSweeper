@@ -9,9 +9,11 @@ namespace LogicTest
         [TestMethod]
         public void UsingFunctionPlaceMineShouldReturnStar()
         {
-            var cell = new Cell(true);
+            var cell = new Cell();
 
-            var result = cell.placeMine();
+            cell.placeMine();
+
+            var result = cell.MineState;
 
             Assert.AreEqual("*", result);
         }
@@ -19,9 +21,11 @@ namespace LogicTest
         [TestMethod]
         public void UsingFunctionPlaceEmptyCellShouldReturn0()
         {
-            var cell = new Cell(true);
+            var cell = new Cell();
 
-            var result = cell.placeEmptyCell();
+            cell.placeEmptyCell();
+
+            var result = cell.EmptyCellState;
 
             Assert.AreEqual(0, result);
         }
@@ -29,16 +33,16 @@ namespace LogicTest
         [TestMethod]
         public void EmptyCellShouldReturnTrueAndMineCellShouldReturnFalse()
         {
-            var cell = new Cell(true);
+            var cell = new Cell();
 
             cell.placeEmptyCell();
-            var resultEmptyCell = cell.LogicCurrentState;
+            var resultEmptyCell = cell.CurrentState;
 
             cell.placeMine();
-            var resultMineCell = cell.LogicCurrentState;
+            var resultMineCell = cell.CurrentState;
 
-            Assert.AreEqual(true, resultEmptyCell);
-            Assert.AreEqual(false, resultMineCell);
+            Assert.AreEqual(false, resultEmptyCell);
+            Assert.AreEqual(true, resultMineCell);
 
         }
     }

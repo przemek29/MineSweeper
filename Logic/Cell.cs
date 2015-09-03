@@ -1,35 +1,45 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-*/
+
 namespace Logic
 {
     public class Cell
     {
-        private bool logicCurrentState;
+        private bool logicState; 
+        private string mineState;
+        private int emptyCellState;
 
-        public bool LogicCurrentState
+        public string MineState
         {
-            get { return logicCurrentState; }
-            set { logicCurrentState = value; }
+            get { return mineState; }
+            set { mineState = value; }
         }
 
-        public Cell(bool state)
+        public int EmptyCellState
         {
-            this.logicCurrentState = state;
-        }
-        public string placeMine()
-        {
-            LogicCurrentState = false;
-            return "*";
+            get { return emptyCellState; }
+            set { emptyCellState = value; }
         }
 
-        public int placeEmptyCell()
+        public bool CurrentState
         {
-            LogicCurrentState = true;
-            return 0;
+            get { return logicState; }
+            set { logicState = value; }
+        }
+
+        public void placeMine()
+        {
+            logicState = true;
+            mineState = "*";
+        }
+
+        public void placeEmptyCell()
+        {
+            logicState = false;
+            emptyCellState = 0;
         }
 
     }
